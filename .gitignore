@@ -1,0 +1,79 @@
+# Visual Studio ve .NET Core / .NET 5+ Projeleri İçin İdeal .gitignore
+
+# ------------------------------------
+# 1. BİNARYLER, PAKETLER VE ÇIKTILAR
+# ------------------------------------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.pdb
+*.suo
+*.user
+*.userprefs
+*.log
+*.vspscc
+*.vssscc
+*.bak
+*.exe
+*.dll
+*.intelliSense.js
+*_i.c
+*_p.c
+*.[Rr]esealing[Tt]oken.dll
+*.deploy
+
+# NuGet paketleri (eğer projenin içinde saklanıyorsa, ki genelde bu önerilmez)
+# Eğer kullanıyorsan aşağıdaki satırları ekleyebilirsin:
+# packages/
+
+# Bağımlılık klasörleri
+.vs/
+.vscode/
+
+# ------------------------------------
+# 2. AYAR DOSYALARI VE KULLANICI ÖZELLEŞTİRMELERİ
+# ------------------------------------
+# Visual Studio Kullanıcı Ayarları
+*.suo
+*.user
+
+# Çözüm dosyasının (Solution) gizli ayar klasörü
+.vs/ 
+
+# Resharper Ayarları (Kullanıyorsan)
+*.DotSettings
+*.user.prefs
+
+# Diğer geliştirme araçlarının ayarları
+# Rider IDE
+.idea/
+
+# Dotnet Test klasörleri
+TestResults/
+coverlet/
+
+# ------------------------------------
+# 3. VERİTABANI VE YEREL DEPOLAMA
+# ------------------------------------
+# SQL Server LocalDB veya diğer yerel veritabanları
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Entity Framework Core Migrations dosyaları (Dışarıda bırakılmamalıdır, 
+# ancak bazen yanlışlıkla buraya eklenir. Kontrol amaçlı burada.)
+# EF Migrations klasörü genellikle versiyon kontrolüne alınır!
+
+# ------------------------------------
+# 4. TEMP/LOG DOSYALARI VE DERLEME ÖN BELLEĞİ
+# ------------------------------------
+[Tt]emp/
+[Ll]og/
+Artifacts/
+**/*.zip
+**/*.rar
+
+# Windows Thumbnail Cache
+Thumbs.db
